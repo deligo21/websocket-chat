@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Web Socket</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body class="container" data-bs-theme="dark">
+
+    <div class="row mt-5">
+        <div class="col-sm-6">
+
+            <h3>Enviar Mensaje</h3>
+            <hr>
+            <input type="text"
+                id="txtUid"
+                class="form-control mb-2"
+                placeholder="uid"
+                autocomplete="off">
+
+            <input type="text"
+                id="txtMensaje"
+                class="form-control mb-2"
+                placeholder="Mensaje"
+                autocomplete="off">
+
+            <h3>Usuarios activos</h3>
+            <hr>
+            <ul id="ulUsuarios">
+
+            </ul>
+        </div>
+
+
+        <div class="col-sm-6">
+            <h3>Historial del chat</h3>
+            <hr>
+
+            <ul id="ulMensajes"></ul>
+
+            <h3>Mensajes privados</h3>
+            <hr>
+            <ul id="ulMensajesPriv"></ul>
+        </div>
+    </div>
+
+    <button id="btnSalir" class="btn btn-outline-danger">
+        Logout
+    </button>
+    
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="./js/chat.js"></script>
+</body>
+</html>
